@@ -59,23 +59,23 @@ public class CalcDistribution {
 		ExponentialDistribution exponentialDist = new ExponentialDistribution(mean);
 		KolmogorovSmirnovTest ks = new KolmogorovSmirnovTest();
 		Double ksTest = ks.kolmogorovSmirnovStatistic(exponentialDist, data);
-		if (Double.isFinite(ksTest)) {
-			ksTest = new BigDecimal(ksTest).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
-		}
+//		if (Double.isFinite(ksTest)) {
+//			ksTest = new BigDecimal(ksTest).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+//		}
 		System.out.println("KS EXPONENTIAL:" + ksTest);
 
 		// ChiSquare
 		Double chi = calcChiSquare(data, exponentialDist);
-		if (Double.isFinite(chi)) {
-			chi = new BigDecimal(chi).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
-		}
+//		if (Double.isFinite(chi)) {
+//			chi = new BigDecimal(chi).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+//		}
 		System.out.println("ChiSquare EXPO:" + chi);
 
 		// AD
 		Double ad = calcAndersonDarling(data, exponentialDist);
-		if (Double.isFinite(ad)) {
-			ad = new BigDecimal(ad).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
-		}
+//		if (Double.isFinite(ad)) {
+//			ad = new BigDecimal(ad).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+//		}
 		System.out.println("AD EXPONENTIAL:" + ad);
 
 		Exponential exponential = new Exponential(exponentialDist, ksTest, chi, ad);
@@ -115,23 +115,23 @@ public class CalcDistribution {
 		// KS
 		KolmogorovSmirnovTest ks = new KolmogorovSmirnovTest();
 		Double ksTest = ks.kolmogorovSmirnovStatistic(logNormalDist, data);
-		if (Double.isFinite(ksTest.doubleValue())) {
-			ksTest = new BigDecimal(ksTest).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
-		}
+//		if (Double.isFinite(ksTest.doubleValue())) {
+//			ksTest = new BigDecimal(ksTest).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+//		}
 		System.out.println("KS LOGNORMAL:" + ksTest);
 
 		// ChiSquare
 		Double chi = calcChiSquare(data, logNormalDist);
-		if (Double.isFinite(chi)) {
-			chi = new BigDecimal(chi).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
-		}
+//		if (Double.isFinite(chi)) {
+//			chi = new BigDecimal(chi).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+//		}
 		System.out.println("ChiSquare LOGNORMAL:" + chi);
 
 		// AD
 		Double ad = calcAndersonDarling(data, logNormalDist);
-		if (Double.isFinite(ad)) {
-			ad = new BigDecimal(ad).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
-		}
+//		if (Double.isFinite(ad)) {
+//			ad = new BigDecimal(ad).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+//		}
 		System.out.println("AD LOGNORMAL:" + ad);
 
 		Lognormal lognormal = new Lognormal(logNormalDist, ksTest, chi, ad);
@@ -181,22 +181,22 @@ public class CalcDistribution {
 		// KS
 		KolmogorovSmirnovTest ks = new KolmogorovSmirnovTest();
 		Double ksTest = ks.kolmogorovSmirnovStatistic(gammaDist, data);
-		if (Double.isFinite(ksTest)) {
-			ksTest = new BigDecimal(ksTest).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
-		}
+//		if (Double.isFinite(ksTest)) {
+//			ksTest = new BigDecimal(ksTest).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+//		}
 		System.out.println("KS GAMMA:" + ksTest);
 
 		// ChiSquare
 		Double chi = calcChiSquare(data, gammaDist);
-		if (Double.isFinite(chi)) {
-			chi = new BigDecimal(chi).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
-		}
+//		if (Double.isFinite(chi)) {
+//			chi = new BigDecimal(chi).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+//		}
 		System.out.println("ChiSquare GAMMA:" + chi);
 
 		Double ad = calcAndersonDarling(data, gammaDist);
-		if (Double.isFinite(ad)) {
-			ad = new BigDecimal(ad).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
-		}
+//		if (Double.isFinite(ad)) {
+//			ad = new BigDecimal(ad).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+//		}
 		System.out.println("AD GAMMA:" + ad);
 
 		Gamma gamma = new Gamma(gammaDist, ksTest, chi, ad);
@@ -288,23 +288,23 @@ public class CalcDistribution {
 		// KS
 		KolmogorovSmirnovTest ks = new KolmogorovSmirnovTest();
 		Double ksTest = ks.kolmogorovSmirnovStatistic(weibullDist, data);
-		if (Double.isFinite(ksTest)) {
-			ksTest = new BigDecimal(ksTest).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
-		}
+//		if (Double.isFinite(ksTest)) {
+//			ksTest = new BigDecimal(ksTest).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+//		}
 		System.out.println("KS WEIBULL:" + ksTest);
 
 		// ChiSquare
 		Double chi = calcChiSquare(data, weibullDist);
-		if (Double.isFinite(chi)) {
-			chi = new BigDecimal(chi).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
-		}
+//		if (Double.isFinite(chi)) {
+//			chi = new BigDecimal(chi).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+//		}
 		System.out.println("ChiSquare WEIBULL:" + chi);
 
 		// Anderson Darling
 		Double ad = calcAndersonDarling(data, weibullDist);
-		if (Double.isFinite(ad)) {
-			ad = new BigDecimal(ad).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
-		}
+//		if (Double.isFinite(ad)) {
+//			ad = new BigDecimal(ad).setScale(4, BigDecimal.ROUND_HALF_EVEN).doubleValue();
+//		}
 		System.out.println("AD WEIBULL:" + ad);
 
 		Weibull weibull = new Weibull(weibullDist, ksTest, chi, ad);
